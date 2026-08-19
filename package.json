@@ -1,0 +1,35 @@
+{
+  "name": "madflow",
+  "version": "1.0.0",
+  "description": "MadFlow - Sistema de movilidad local para Madrid",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm start",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:build": "docker-compose build",
+    "clean": "rm -rf backend/node_modules frontend/node_modules node_modules",
+    "clean:windows": "rmdir /s /q backend\\node_modules frontend\\node_modules node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "mobility",
+    "madrid",
+    "traffic",
+    "parking",
+    "air-quality"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

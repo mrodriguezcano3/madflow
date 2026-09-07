@@ -1,6 +1,6 @@
-# 🚗 MadFlow - Smart Mobility for Madrid
+#  MadFlow - Smart Mobility for Madrid
 
-## 🎯 Objetivo del Proyecto
+##  Objetivo del Proyecto
 
 MadFlow es una aplicación de movilidad urbana diseñada para ayudar a los conductores en Madrid a encontrar el mejor parking en función de tres factores clave: **tráfico en tiempo real**, **disponibilidad de plazas** y **calidad del aire**. El sistema calcula un índice de viabilidad (ZoneMobilityScore) que evalúa la idoneidad de desplazarse en coche a diferentes zonas de la ciudad.
 

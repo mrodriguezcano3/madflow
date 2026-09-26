@@ -30,6 +30,7 @@ El proyecto se ha desarrollado aplicando **Clean Architecture** para demostrar b
 | **Leaflet + react-leaflet** | Visualización de mapas interactivos |
 | **OpenStreetMap** | Capas de mapas gratuitas |
 
+<<<<<<< HEAD
 ### DevOps
 | Tecnología | Propósito |
 |------------|-----------|
@@ -38,30 +39,34 @@ El proyecto se ha desarrollado aplicando **Clean Architecture** para demostrar b
 
 ---
 
-##  Instalación y Uso
+## 🚀 Instalación y Uso
 
 ### Requisitos Previos
 - Node.js ≥ 18
-- Docker Desktop (opcional, para Redis)
+- Docker Desktop (para Redis)
 - npm
 
-### Instalación Local (Recomendada)
+### Pasos
 
-# Clonar el repositorio
+1. Clonar el repositorio e instalar dependencias:
+
 git clone https://github.com/tu-usuario/madflow.git
 cd madflow
-
-# Instalar todas las dependencias
 npm run install:all
 
-# Iniciar backend y frontend simultáneamente
+2. Levantar Redis con Docker:
+
+docker-compose up -d redis
+
+3. Arrancar backend y frontend (desde la raíz del proyecto):
+
 npm run dev
 
-# Una vez iniciado, accede a:
+Una vez arrancados:
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:3000
 
-Frontend: http://localhost:5173
-
-Backend API: http://localhost:3000
+Para detener todo, Ctrl+C en la terminal de `npm run dev` y `docker-compose down` para Redis.
 
 ---
 
@@ -81,11 +86,3 @@ Recomendación (Excelente/Regular/Desfavorable)
 Detalles de tráfico, plazas libres y calidad del aire
 
 Los marcadores cambian de color según la puntuación obtenida
-
----
-
-## Endpoints Principales
-
-GET /api/health	 -->  Verificar estado del backend
-GET /api/parkings	 -->  Obtener lista de parkings
-GET /api/mobility/:id	 -->  Obtener score de movilidad de un parking
